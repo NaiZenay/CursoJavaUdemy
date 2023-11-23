@@ -14,13 +14,11 @@ public class Rules {
         //Puede reasignarse el valor de la variable
         num2 = 20;
 
-        //Varaibles dentro de estructuras solo existen ahi
+        //Variables dentro de estructuras solo existen ahi
         for(int i = 0; i < 10; i++) {
             System.out.println(i);
         }
-        //No leera i ya que solo existe dentro de la estructura for
-        System.out.println(i);
-        
-
+        //No podrá leer i ya que solo existe dentro de la estructura for
+        //System.out.println(i);
     }
 }

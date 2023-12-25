@@ -1,19 +1,15 @@
 package Ejercicios;
-
 import javax.swing.*;
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Factura {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         double total;
         double producto1=0;
         double producto2=0;
         String resultado;
-        boolean preciosValidos=true;
+        boolean preciosValidos;
 
         String nombreFactura = JOptionPane.showInputDialog(null, "Ingrese el nombre o descripcion de la factura");
+
         do{
             preciosValidos=true;
             String inputPrecioProducto1 = JOptionPane.showInputDialog(null, "Ingrese el precio del primer producto a facturar");
@@ -29,6 +25,7 @@ public class Factura {
         }while (!preciosValidos);
 
         total = producto1 + producto2 + (producto1 + producto2) * 0.19;
+
         resultado ="Factura: --" + nombreFactura + "--\n"+
                 "Producto 1:        " + producto1 + "\n" +
                 "Producto 2:        " + producto2 + "\n" +

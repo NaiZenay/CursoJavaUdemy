@@ -6,5 +6,19 @@ public class Unarios {
         int j= +i;//j = i(-5)* +1
         j= -i;//j = i(-5)* -1
 
+        //Jerarquia de operaciones
+        /*
+        | Operador | Significado |
+        | ++,--,+,-,! | incremento,decremento,suma,resta,negacion |
+        | () | parentesis |
+        | *,/,% | Operaciones aritmeticas |
+        | >,>=,<,<= intanceof | relacionales |
+        | ==, != | comparacion,disntito de |
+        | && | AND |
+        | || | or |
+        | ()?: | ternario |
+        | +,+=,-=,*=,/=,%= | asignacion |
+        */
+
     }
 }

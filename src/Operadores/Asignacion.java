@@ -9,5 +9,20 @@ public class Asignacion {
         i -=j;//i = i - j;
         i *=j;//i = i * j;
         i /=j;//i = i / j;
+
+        //Jerarquia de operaciones
+        /*
+        | Operador | Significado |
+        | ++,--,+,-,! | incremento,decremento,suma,resta,negacion |
+        | () | parentesis |
+        | *,/,% | Operaciones aritmeticas |
+        | >,>=,<,<= intanceof | relacionales |
+        | ==, != | comparacion,disntito de |
+        | && | AND |
+        | || | or |
+        | ()?: | ternario |
+        | +,+=,-=,*=,/=,%= | asignacion |
+        */
+
     }
 }

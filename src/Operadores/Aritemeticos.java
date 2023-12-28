@@ -12,5 +12,20 @@ public class Aritemeticos {
         System.out.println(num%num2);//Resto o modulo
 
         System.out.println("A"+"B");//concatenacion
+
+        //Jerarquia de operaciones
+        /*
+        | Operador | Significado |
+        | ++,--,+,-,! | incremento,decremento,suma,resta,negacion |
+        | () | parentesis |
+        | *,/,% | Operaciones aritmeticas |
+        | >,>=,<,<= intanceof | relacionales |
+        | ==, != | comparacion,disntito de |
+        | && | AND |
+        | || | or |
+        | ()?: | ternario |
+        | +,+=,-=,*=,/=,%= | asignacion |
+        */
+
     }
 }

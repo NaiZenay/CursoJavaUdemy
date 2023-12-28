@@ -1,12 +1,12 @@
 package Operadores;
 
-public class incrementales {
+public class Ternario {
     public static void main(String[] args) {
-        int i=0;
-        int j= ++i;//PreIncremeto previo a la asignacion de valor la variable
-        j= --i;//PreDecremeto previo a la asignacion de valor la variable
-        j= i++;//PostIncremeto Despues de la asignacion de valor la variable
-        j= i--;//PostDencremeto Despues de la asignacion de valor la variable
+        int i =10;
+        int j =20;
+        boolean b1= i<j;
+        System.out.println(b1?"aprobado":"reprobado");
+                        //if(condicion)?, true : false
 
         //Jerarquia de operaciones
         /*
@@ -21,7 +21,5 @@ public class incrementales {
         | ()?: | ternario |
         | +,+=,-=,*=,/=,%= | asignacion |
         */
-
     }
 }
-

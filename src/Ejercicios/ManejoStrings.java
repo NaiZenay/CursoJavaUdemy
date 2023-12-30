@@ -1,8 +1,5 @@
 package Ejercicios;
-
 import javax.swing.*;
-import java.util.Locale;
-
 public class ManejoStrings {
     public static void main(String[] args) {
         String[] nombres = new String[3];

@@ -3,6 +3,10 @@ package Ejercicios;
 import javax.swing.*;
 
 public class EjercicicoSistemasNumericos {
+    //Desafio: Concersion de Sistemas Numericos
+    /*
+    Ingresar un numero entero y que muestre al usuario el equivalente de ese numero en los sistemas numericos Octal,Hexadecimal y Binario
+     */
     public static void main(String[] args) {
         boolean numeroValido;
         int numeroDecimal = 0;

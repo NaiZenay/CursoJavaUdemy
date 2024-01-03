@@ -3,6 +3,17 @@ package Ejercicios;
 import java.util.Scanner;
 
 public class AnalizadorDeTexto {
+    //Desafio:Analizador De Texto
+
+    /*
+    Crear un progrma que reciba cualquier texto y realice lo siguiente:
+    Que el usuario elija 3 caracteres y el programa le diga cuantas veces se encuantran esos caracteres en el texto
+    Contar la cantidad de palabras del texto
+    Mostrar cual es el primer u ultimo caracter del texto
+    Como se veria el texto si se invirtieran las palabras de este
+    Mostrar si en el texto esta la palabra "Java"
+     */
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -19,6 +30,7 @@ public class AnalizadorDeTexto {
 
         boolean charInvalido;
         //if there is a god is fking me!!!
+        //Input de caracteres
         for (int i = 0; i < letras.length; i++) {
             System.out.println("Ingresa caracter");
             do {

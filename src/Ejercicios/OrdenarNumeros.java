@@ -1,6 +1,10 @@
 package Ejercicios;
 import java.util.Scanner;
 public class OrdenarNumeros {
+    /*
+    El desafío es un programa que pida dos números y los muestre ordenados de mayor a menor.
+    Podría ser utilizando operador ternario.
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] numeros = new int[2];

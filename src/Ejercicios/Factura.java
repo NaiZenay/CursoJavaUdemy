@@ -1,6 +1,12 @@
 package Ejercicios;
 import javax.swing.*;
 public class Factura {
+    //Desafio: Mostrar Factura
+    /*
+    Pedir al usurio el nombre de la facturay 2 objetos a facturar
+    Mostrar el total bruto
+    y total neto con un impuetso de 19% al total bruto
+     */
     public static void main(String[] args) {
         double total;
         double producto1=0;

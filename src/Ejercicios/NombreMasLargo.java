@@ -3,6 +3,13 @@ package Ejercicios;
 import javax.swing.*;
 
 public class NombreMasLargo {
+    /*
+    Obtener el nombre mas largo de tres personas, según los siguientes requerimientos
+Mediante el teclado pedir el nombre completo (nombre + apellido) de tres miembros de la familia o amigos.
+Calcular e Imprimir el nombre de la persona que tenga el nombre más largo (en cantidad de caracteres)   (Imprimir sólo uno de los tres, el de más caracteres en el nombre.)
+Restricción no usar loops en el desarrollo de la tarea.
+Ejemplo del resultado: "Guillermo Doe tiene el nombre más largo."
+     */
     public static void main(String[] args) {
         String inputnombre1 = JOptionPane.showInputDialog(null, "Ingresa el nombre y apellido de un familiar o amigo");
         String inputnombre2 = JOptionPane.showInputDialog(null, "Ingresa el nombre y apellido de un familiar o amigo");

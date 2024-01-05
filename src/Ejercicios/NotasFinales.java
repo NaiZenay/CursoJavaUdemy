@@ -9,7 +9,7 @@ public class NotasFinales {
         Opcional: si una de las notas ingresadas es 0 debe salirse del ciclo for y mostrar un mensaje de error finalizando el programa.
          */
         Scanner scanner = new Scanner(System.in);
-        double[] notas = new double[5];
+        double[] notas = new double[20];
         double promedionotasMayores8 = 0;
         double promedionotasMenores4 = 0;
         double promedioTotal = 0;
@@ -22,7 +22,10 @@ public class NotasFinales {
             notas[i] = scanner.nextDouble();
             promedioTotal += notas[i];
 
-            if (notas[i] > 8) {
+            if(notas[i]==0){
+                System.out.println("ERROR");
+                System.exit(0);
+            } else if (notas[i] > 8) {
                 countNotasMayores8++;
                 promedionotasMayores8 += notas[i];
             } else if (notas[i] == 1) {

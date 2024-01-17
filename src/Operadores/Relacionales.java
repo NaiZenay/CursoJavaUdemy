@@ -8,7 +8,11 @@ public class Relacionales {
         double l = 2.1234455d;
         boolean m = false;
 
-        System.out.println(i == j);//comparaciom
+        Integer a=12;
+        Integer b=12;
+
+        System.out.println(i == j);//comparacion (por objeto cuando se comprarn objetos)
+        System.out.println(a.equals(b));//comparacion por valor cuando se comprarn objetos
         System.out.println(!m);//negacion de
         System.out.println(i != j);//distinto de
         System.out.println(i > j);//mayor que

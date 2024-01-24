@@ -9,7 +9,7 @@ public class Booleans {
         Boolean objetoBoolean2= Boolean.valueOf("false");
 
         System.out.println(objetoBoolean==objetoBoolean2);//iguales
-        
+
 
     }
 }

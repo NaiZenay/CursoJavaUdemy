@@ -1,3 +1,5 @@
+package Ejercicios;
+
 public class DibujarTriangulo {
     public static void main(String[] args) {
         String triangulo="";

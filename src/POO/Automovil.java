@@ -7,7 +7,7 @@ public class Automovil {
 
     //Atributos
     private int id;
-
+    private TipoAutomovil tipo;
     private String fabricante;
     private String modelo;
 
@@ -23,12 +23,13 @@ public class Automovil {
     //Se escribe en mayusculas y las palbras compuestas se separan con guion bajo
     public final static int VELOCIDAD_MAX_CARRETERA = 120;
 
+
     //Constructores
     public Automovil() {
         this.id = ++ultimoID;
     }//Constructor por default
 
-    public Automovil(String fabricante, String modelo, String color) {//Constructor sobrecargado
+    public Automovil(String fabricante, String modelo, Color color) {//Constructor sobrecargado
         this();//llama al constructor por default
         this.setModelo(modelo);
         this.setColor();
@@ -66,26 +67,35 @@ public class Automovil {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Selecciona el numero del color a elegir\n" +
                 "1)Rojo\n2)Amarillo\n3)Azul\n4)Gris\n5)Naranja");
-        int color=scanner.nextInt();
+        int color = scanner.nextInt();
+
         switch (color) {
             case 1:
-                this.color=String.valueOf(Color.ROJO);
+                this.color = String.valueOf(Color.ROJO);
                 break;
             case 2:
-                this.color=String.valueOf(Color.AMARILLO);
+                this.color = String.valueOf(Color.AMARILLO);
                 break;
             case 3:
-                this.color=String.valueOf(Color.AZUL);
+                this.color = String.valueOf(Color.AZUL);
                 break;
             case 4:
-                this.color=String.valueOf(Color.Gris);
+                this.color = String.valueOf(Color.Gris);
                 break;
             case 5:
-                this.color=String.valueOf(Color.NARANJA);
+                this.color = String.valueOf(Color.NARANJA);
                 break;
             default:
                 break;
         }
+    }
+
+    public TipoAutomovil getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoAutomovil tipo) {
+        this.tipo = tipo;
     }
 
     public int getId() {
@@ -157,6 +167,7 @@ public class Automovil {
                 "Fabricante:" + this.getFabricante() + "\n" +
                 "Modelo:" + this.getModelo() + "\n" +
                 "Color:" + this.getColor() + "\n" +
-                "Color de la Patente " + Automovil.colorPantente + "\n";
+                "Color de la Patente " + Automovil.colorPantente + "\n" +
+                "Tipo de Auto: "+this.getTipo()+"\n";
     }
 }

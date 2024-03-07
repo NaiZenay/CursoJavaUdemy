@@ -11,6 +11,8 @@ public class Automovil {
     private String fabricante;
     private String modelo;
 
+    private Persona owner;
+
     //Valor por default al crear el objeto
     private String color = "gris";
 
@@ -57,6 +59,14 @@ public class Automovil {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public Persona getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Persona owner) {
+        this.owner = owner;
     }
 
     public String getColor() {
@@ -159,6 +169,7 @@ public class Automovil {
     @Override
     public String toString() {
         return "ID: " + this.getId() + "\n" +
+                "Dueño:" +this.owner.toString()+"\n"+
                 "Fabricante:" + this.getFabricante() + "\n" +
                 "Modelo:" + this.getModelo() + "\n" +
                 "Color:" + this.getColor() + "\n" +

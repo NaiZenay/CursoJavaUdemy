@@ -70,23 +70,18 @@ public class Automovil {
         int color = scanner.nextInt();
 
         switch (color) {
-            case 1:
+            case 1 ->
                 this.color = String.valueOf(Color.ROJO);
-                break;
-            case 2:
+            case 2 ->
                 this.color = String.valueOf(Color.AMARILLO);
-                break;
-            case 3:
+            case 3 ->
                 this.color = String.valueOf(Color.AZUL);
-                break;
-            case 4:
+            case 4 ->
                 this.color = String.valueOf(Color.Gris);
-                break;
-            case 5:
+            case 5->
                 this.color = String.valueOf(Color.NARANJA);
-                break;
-            default:
-                break;
+            default ->
+                this.color="gris";
         }
     }
 

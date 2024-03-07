@@ -14,5 +14,8 @@ public class Main {
 
         System.out.println(automovil.toString());
 
+        TipoAutomovil.getTipos();
+
+
     }
 }

@@ -3,13 +3,13 @@ package POO;
 //enumeradores mas complejos
 public enum TipoAutomovil {
     //Un constructor para cada constante
-    SEDAN("Sedan",4,"Auto mediano"),
-    STATION_WAGON("Station Wagon", 4,"Auto Grande"),
-    HATCHBACK("Hatchback",4,"Auto compacto"),
-    PICKUP("PickUp",4,"Camioneta"),
-    COUPE("Coupe",2,"Auto pequeñó"),
-    CONVERTIBLE("Convertible",2,"Auto deportivo"),
-    FURGON("Furgon",4,"Auto utilitario");
+    SEDAN("Sedan", 4, "Auto mediano"),
+    STATION_WAGON("Station Wagon", 4, "Auto Grande"),
+    HATCHBACK("Hatchback", 4, "Auto compacto"),
+    PICKUP("PickUp", 4, "Camioneta"),
+    COUPE("Coupe", 2, "Auto pequeñó"),
+    CONVERTIBLE("Convertible", 2, "Auto deportivo"),
+    FURGON("Furgon", 4, "Auto utilitario");
 
     //DEfinicion de contructor
     TipoAutomovil(String nombre, int numeroPuertas, String descripcion) {
@@ -33,5 +33,16 @@ public enum TipoAutomovil {
 
     public String getDescripcion() {
         return descripcion;
+    }
+
+    //Iterar valores de un enum
+    public static void getTipos() {
+                                //Array con los valores del enum
+        for (TipoAutomovil TA : TipoAutomovil.values()) {
+            System.out.println("Nombre:"+TA.getNombre() + "\n" +
+                    "Descripcion:"+TA.getDescripcion() + "\n" +
+                    "Puertas:"+TA.getNumeroPuertas()+ "\n");
+
+        }
     }
 }

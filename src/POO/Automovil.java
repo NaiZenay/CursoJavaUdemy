@@ -2,7 +2,7 @@ package POO;
 
 import java.util.Scanner;
 
-public class Automovil {
+public class Automovil implements Comparable<Automovil> {
 
 
     //Atributos
@@ -175,5 +175,11 @@ public class Automovil {
                 "Color:" + this.getColor() + "\n" +
                 "Color de la Patente " + Automovil.colorPantente + "\n" +
                 "Tipo de Auto: "+this.getTipo()+"\n";
+    }
+
+    //Implemnetacion del metodo compareTo para ordenar listas en base a un atributo de la clase
+    @Override
+    public int compareTo(Automovil a) {
+        return this.fabricante.compareTo(a.getFabricante());
     }
 }

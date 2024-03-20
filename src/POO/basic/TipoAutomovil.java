@@ -1,4 +1,4 @@
-package POO;
+package POO.basic;
 
 //enumeradores mas complejos
 public enum TipoAutomovil {

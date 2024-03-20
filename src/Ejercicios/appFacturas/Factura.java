@@ -76,32 +76,35 @@ public class Factura {
     public String mostrarDetalle() {
         StringBuilder sb = new StringBuilder("Factura No.");
         sb.append(folio)
-                .append("\nCliente:")
+                .append("\nCliente: ")
                 .append(this.getCliente().getNombre())
                 .append("\t nif: ")
                 .append(this.getCliente().getNif())
-                .append("\nDescripcion:")
+                .append("\nDescripcion: ")
                 .append(this.getDescripcion()).append("\n")
-                .append("\n#\tNombre\t$\tCantidad\tTotal\n");
+                .append("\n#\tNombre\t\t$\t\tCantidad\tTotal\n");
 
         for (ItemFactura item : this.itemsFactura) {
             if (item != null) {
                 sb.append(item.getProducto().getCodigo())
                         .append("\t")
                         .append(item.getProducto().getNombre())
-                        .append("\t")
+                        .append("\t\t")
                         .append(item.getProducto().getPrecio())
-                        .append("\t")
+                        .append("\t\t")
                         .append(item.getCantidad())
-                        .append("\t")
+                        .append("\t\t")
                         .append(item.calcularImporte())
+                        .append("\n")
                         .append("\n");
             }
         }
         sb.append("Total: $")
-                .append(calcularTotal());
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMMM-dd");
-        sb.append("Fecha de Facturazion:\n");
+                .append(calcularTotal())
+                .append("\n");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy HH:mm");
+        sb.append("Fecha de Facturazion: ");
         sb.append(sdf.format(this.getFecha()));
 
         return sb.toString();

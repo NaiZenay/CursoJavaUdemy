@@ -4,27 +4,27 @@ import java.util.Scanner;
 
 public class app {
     public static void main(String[] args) {
-        Cliente cliente= new Cliente();
+        Cliente cliente = new Cliente();
         cliente.setNombre("Empresa Random");
         cliente.setNif("5555-123");
 
-        Scanner scanner= new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Ingrese la descripcion de la factura");
-        String descripcion= scanner.nextLine();
-        Factura factura=new Factura(cliente,descripcion);
+        Factura factura = new Factura(cliente,scanner.nextLine());
+
         Producto producto;
         for (int i = 0; i < 5; i++) {
-            producto= new Producto();
+            producto = new Producto();
+
             System.out.println("Ingrese el nombre del producto");
-            String nombre=scanner.next();
-            producto.setNombre(nombre);
+            producto.setNombre(scanner.next());
+
             System.out.println("Ingrese el precio del producto");
-            double precio=scanner.nextDouble();
-            producto.setPrecio(precio);
+            producto.setPrecio(scanner.nextDouble());
+
             System.out.println("Ingrese la cantidad del producto");
-            int cantidad=scanner.nextInt();
-            ItemFactura itemFactura=new ItemFactura(producto,cantidad);
-            factura.addItemsFactura(itemFactura);
+            factura.addItemsFactura(new ItemFactura(producto, scanner.nextInt()));
             System.out.println();
         }
 

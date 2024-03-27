@@ -20,8 +20,7 @@ public class main {
                 new NoPerecible("Atun Enlatado", 5, 100, 240),
                 new NoPerecible("Arroz", 12, 1000, 1300)
         };
-        for (Producto producto : productos) {
-            System.out.println(producto.toString());
-        }
+
+        for (Producto producto : productos)System.out.println(producto);
     }
 }

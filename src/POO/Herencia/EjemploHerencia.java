@@ -9,7 +9,10 @@ public class EjemploHerencia {
         alumno.setCalificacionMatematicas(9.8);
         alumno.setCalificacionFisica(10.0);
         alumno.setCalificacionHistoria(6.8);
-        imprimir(alumno);
+//        imprimir(alumno);
+        alumno.calcularPromedio();
+        System.out.println(alumno.getPromedio());
+        alumno.saludar();
 
         AlumnoInternacional alumnoInternacional = new AlumnoInternacional("Alemania");
         alumnoInternacional.setNombre("Hanz");
@@ -19,6 +22,9 @@ public class EjemploHerencia {
         alumnoInternacional.setCalificacionHistoria(10);
         alumnoInternacional.setCalificacionMatematicas(7.6);
         alumnoInternacional.setNotaIdiomas(9.0);
+        alumnoInternacional.saludar();
+        alumnoInternacional.calcularPromedio();
+        System.out.println(alumnoInternacional.getPromedio());
 
 
         Profesor profesor = new Profesor();
@@ -26,6 +32,7 @@ public class EjemploHerencia {
         profesor.setApellido("Lopez");
         profesor.email = "rochard.lopez098@gmail.com";
         profesor.setAsignatura(Asignaturas.MATEMATICAS);
+        profesor.saludar();
 
         Persona profesor2 = new Profesor();
         //Solo puede acceder a los metodos de Persona

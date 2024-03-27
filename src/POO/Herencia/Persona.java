@@ -35,4 +35,15 @@ public class Persona {
         this.edad = edad;
     }
 
+    public void saludar(){
+        System.out.print("Hola");
+    }
+
+    @Override
+    public String toString() {
+        return  "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", email='" + email + '\'';
+    }
 }

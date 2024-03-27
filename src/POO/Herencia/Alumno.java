@@ -1,7 +1,7 @@
 package POO.Herencia;
 //declaracion de la herencia de Persona
 public class Alumno extends Persona{
-    private double promedio;
+    protected double promedio;
     private String colegio;
     private double calificacionHistoria;
     private double calificacionMatematicas;
@@ -13,10 +13,6 @@ public class Alumno extends Persona{
 
     public double getPromedio() {
         return promedio;
-    }
-
-    public void setPromedio(double promedio) {
-        this.promedio = promedio;
     }
 
     public String getColegio() {
@@ -49,5 +45,26 @@ public class Alumno extends Persona{
 
     public void setCalificacionFisica(double calificacionFisica) {
         this.calificacionFisica = calificacionFisica;
+    }
+
+    public void calcularPromedio(){
+        promedio=(calificacionFisica+calificacionHistoria+calificacionMatematicas)/3;
+    }
+
+    //Metodo sobrescrito de la clase padre persona
+    @Override
+    public void saludar() {
+        //Manda a llamar al metodo de la clase padre y luego ejecuta la version de la clase hija
+        super.saludar();
+        System.out.print(" soy alumno de "+colegio+ " mi nombre es "+getNombre());
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"\npromedio=" + promedio +
+                ", colegio='" + colegio + '\'' +
+                ", calificacionHistoria=" + calificacionHistoria +
+                ", calificacionMatematicas=" + calificacionMatematicas +
+                ", calificacionFisica=" + calificacionFisica;
     }
 }

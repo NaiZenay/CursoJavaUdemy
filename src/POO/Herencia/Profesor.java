@@ -1,6 +1,7 @@
 package POO.Herencia;
 
-public class Profesor extends Persona {
+//si se agrega el operador "final" la clase no puede heredar a otras
+public final class Profesor extends Persona {
     private Asignaturas asignatura;
 
     public Asignaturas getAsignatura() {

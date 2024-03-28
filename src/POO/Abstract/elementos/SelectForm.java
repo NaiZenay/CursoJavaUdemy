@@ -33,11 +33,12 @@ public class SelectForm extends ElementForm {
             sb.append("'");
             if (opcion.isSeleccinado()) {
                 sb.append(" selected");
+                this.setValor(opcion.getValor());
             }
-            sb.append("'>");
-            sb.append(opcion.getNombre()).append("</option>");
+            sb.append(">");
+            sb.append(opcion.getId()).append("</option>");
         }
-        sb.append("</selected>");
+        sb.append("\n</select>");
         return sb.toString();
     }
 

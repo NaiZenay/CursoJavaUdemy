@@ -1,24 +1,24 @@
 package POO.Abstract.elementos.select;
 
 public class Opcion {
-    private String nombre;
+    private int id;
     private String valor;
     private boolean seleccinado;
 
     public Opcion() {
     }
 
-    public Opcion(String nombre, String valor) {
-        this.nombre = nombre;
+    public Opcion(int id, String valor) {
+        this.id = id;
         this.valor = valor;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getId() {
+        return id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getValor() {

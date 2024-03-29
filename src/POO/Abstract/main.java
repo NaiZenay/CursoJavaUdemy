@@ -13,15 +13,14 @@ public class main {
     public static void main(String[] args) {
 
         //La unica forma de "instanciar una clase abstracta es creando una clase anonima solo que esta es desechada despues de ser usada"
-  /*
-        ElementForm elementForm= new ElementForm() {
+        //Un elemento que se utiliza una sola vez
+        ElementForm elementForm = new ElementForm("Bienvenida") {
             @Override
             public String dibujarHTML() {
-                return null;
+                return "<input name=\"saludo\" type=\"text\" value=\"Hola\" disabled> ";
             }
         };
 
-   */
 
         InputForm username = new InputForm("username");
         InputForm password = new InputForm("clave", "password");
@@ -30,15 +29,14 @@ public class main {
 
         TextAreaForm expLaboral = new TextAreaForm("exp", 5, 9);
         SelectForm lenguaje = new SelectForm("lenguaje");
-        Opcion java=new Opcion(1, "Java");
-        java.setSeleccinado(true);
-        lenguaje.addOpcion(java)
-        .addOpcion(new Opcion(2, "C"))
-        .addOpcion(new Opcion(3, "C#"))
-        .addOpcion(new Opcion(4, "Python"))
-        .addOpcion(new Opcion(5, "JavaScript"))
-        .addOpcion(new Opcion(6, "Rust"))
-        .addOpcion(new Opcion(7, "C++"));
+
+        lenguaje.addOpcion(new Opcion(1, "Java").setSeleccinado())
+                .addOpcion(new Opcion(2, "C"))
+                .addOpcion(new Opcion(3, "C#"))
+                .addOpcion(new Opcion(4, "Python"))
+                .addOpcion(new Opcion(5, "JavaScript"))
+                .addOpcion(new Opcion(6, "Rust"))
+                .addOpcion(new Opcion(7, "C++"));
 
         username.setValor("Alex Flores");
         password.setValor("qwerty");
@@ -47,7 +45,7 @@ public class main {
         expLaboral.setValor("Lorem ipsum dolor sit amet consectetur adipiscing elit eu, viverra suspendisse malesuada mollis metus commodo montes, facilisi conubia accumsan quisque senectus pretium bibendum. Elementum odio facil.");
 
         List<ElementForm> elementos = new ArrayList<>();
-
+        elementos.add(elementForm);
         elementos.add(username);
         elementos.add(password);
         elementos.add(edad);
@@ -56,6 +54,6 @@ public class main {
         elementos.add(lenguaje);
 
         //Implementacion del API para iterar elementos de ArrayList
-        elementos.forEach(elemento -> System.out.println(elemento.dibujarHTML()+"\n<br>"));
+        elementos.forEach(elemento -> System.out.println(elemento.dibujarHTML() + "\n<br>"));
     }
 }

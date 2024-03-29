@@ -36,7 +36,7 @@ public class SelectForm extends ElementForm {
                 this.setValor(opcion.getValor());
             }
             sb.append(">");
-            sb.append(opcion.getId()).append("</option>");
+            sb.append(opcion.getValor()).append("</option>");
         }
         sb.append("\n</select>");
         return sb.toString();

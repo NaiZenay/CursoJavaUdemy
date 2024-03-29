@@ -5,6 +5,7 @@ import POO.Abstract.elementos.InputForm;
 import POO.Abstract.elementos.SelectForm;
 import POO.Abstract.elementos.TextAreaForm;
 import POO.Abstract.elementos.select.Opcion;
+import POO.Abstract.validador.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +24,20 @@ public class main {
 
 
         InputForm username = new InputForm("username");
+        username.addValidador(new Requerido());
+
         InputForm password = new InputForm("clave", "password");
+        password.addValidador(new NoNulo());
+
         InputForm email = new InputForm("email", "email");
+        email.addValidador(new Email());
+
         InputForm edad = new InputForm("edad", "number");
+        edad.addValidador(new Numerico());
 
         TextAreaForm expLaboral = new TextAreaForm("exp", 5, 9);
+        expLaboral.addValidador(new Largo(20, 200));
+
         SelectForm lenguaje = new SelectForm("lenguaje");
 
         lenguaje.addOpcion(new Opcion(1, "Java").setSeleccinado())
@@ -37,6 +47,8 @@ public class main {
                 .addOpcion(new Opcion(5, "JavaScript"))
                 .addOpcion(new Opcion(6, "Rust"))
                 .addOpcion(new Opcion(7, "C++"));
+
+        lenguaje.addValidador(new NoNulo());
 
         username.setValor("Alex Flores");
         password.setValor("qwerty");
@@ -55,5 +67,13 @@ public class main {
 
         //Implementacion del API para iterar elementos de ArrayList
         elementos.forEach(elemento -> System.out.println(elemento.dibujarHTML() + "\n<br>"));
+        elementos.forEach(elemento ->{
+
+           if (!(elemento.esValido())){
+               elemento.getErrores().forEach(err -> System.out.println("Error en el campo: "+elemento.getNombre()+" ("+err+")"));
+           }
+
+        } );
+
     }
 }

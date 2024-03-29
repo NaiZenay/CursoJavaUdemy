@@ -8,21 +8,51 @@ Clase abstracta
 -no puede tener metodos abstractos en una clase no abstracta
  */
 
+import POO.Abstract.validador.Validador;
+
+import java.util.ArrayList;
+import java.util.List;
+
 abstract public class ElementForm {
     protected String valor;
     protected String nombre;
 
+    private List<Validador> validadores;
+    private List<String> errores;
     public ElementForm() {
+        validadores= new ArrayList<>();
+        errores= new ArrayList();
     }
 
     public ElementForm(String nombre) {
         this();
         this.nombre = nombre;
     }
+    public ElementForm addValidador(Validador validador){
+        validadores.add(validador);
+        return this;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public List<String> getErrores() {
+        return errores;
+    }
 
     public void setValor(String valor) {
         this.valor = valor;
     }
 
+    public boolean esValido(){
+        for(Validador validador:validadores){
+            if(!(validador.esValido(valor))){
+                errores.add(validador.getMensaje());
+            }
+        }
+        return errores.isEmpty();
+
+    }
     abstract public String dibujarHTML();
 }

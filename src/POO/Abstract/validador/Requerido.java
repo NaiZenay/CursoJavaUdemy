@@ -15,6 +15,6 @@ public class Requerido extends Validador{
 
     @Override
     public boolean esValido(String valor) {
-        return valor.isBlank();
+        return !(valor.isBlank());
     }
 }

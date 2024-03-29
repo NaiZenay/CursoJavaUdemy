@@ -1,11 +1,11 @@
 package POO.Abstract.validador;
 
 public class Numerico extends Validador{
-    protected String mensaje="Este campo debe ser un numero";
+    protected String mensaje="El campo %s debe ser un numero";
 
     @Override
     public String getMensaje() {
-        return null;
+        return mensaje;
     }
 
     @Override

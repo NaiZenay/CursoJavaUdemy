@@ -54,7 +54,7 @@ public class main {
         password.setValor("qwerty");
         email.setValor("alex@correo.com");
         edad.setValor("20");
-        expLaboral.setValor("Lorem ipsum dolor sit amet consectetur adipiscing elit eu, viverra suspendisse malesuada mollis metus commodo montes, facilisi conubia accumsan quisque senectus pretium bibendum. Elementum odio facil.");
+        expLaboral.setValor("Lorem ");
 
         List<ElementForm> elementos = new ArrayList<>();
         elementos.add(elementForm);
@@ -70,7 +70,7 @@ public class main {
         elementos.forEach(elemento ->{
 
            if (!(elemento.esValido())){
-               elemento.getErrores().forEach(err -> System.out.println("Error en el campo: "+elemento.getNombre()+" ("+err+")"));
+               elemento.getErrores().forEach(System.out::println);
            }
 
         } );

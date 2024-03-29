@@ -1,11 +1,11 @@
 package POO.Abstract.validador;
 
 public class Requerido extends Validador{
-    protected String mensaje="Este campo es obligatorio";
+    protected String mensaje="El campo %s es obligatorio";
 
     @Override
     public String getMensaje() {
-        return null;
+        return mensaje;
     }
 
     @Override

@@ -8,6 +8,7 @@ Clase abstracta
 -no puede tener metodos abstractos en una clase no abstracta
  */
 
+import POO.Abstract.validador.Largo;
 import POO.Abstract.validador.Validador;
 
 import java.util.ArrayList;
@@ -48,7 +49,11 @@ abstract public class ElementForm {
     public boolean esValido(){
         for(Validador validador:validadores){
             if(!(validador.esValido(valor))){
-                errores.add(validador.getMensaje());
+                if (validador instanceof Largo){
+                    ((Largo)validador).setFormatMessage(this);
+                }else {
+                    errores.add(String.format(validador.getMensaje(),nombre));
+                }
             }
         }
         return errores.isEmpty();

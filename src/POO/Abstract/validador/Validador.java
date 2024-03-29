@@ -1,7 +1,7 @@
 package POO.Abstract.validador;
 
 abstract public class Validador {
-    protected String mensaje;
+   protected String mensaje;
 
     public abstract String getMensaje();
 

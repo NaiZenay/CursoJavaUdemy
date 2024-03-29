@@ -1,9 +1,11 @@
 package POO.Abstract.validador;
 
+import POO.Abstract.elementos.ElementForm;
+
 public class Largo extends Validador {
     private int min = 0;
     private int max = Integer.MAX_VALUE;
-    protected String mensaje = "El campo de tener minimo:" + min + " y maximo:" + max;
+    protected String mensaje = "El campo %s de tener minimo:  %d  y maximo: %d";
 
     public Largo() {
     }
@@ -13,26 +15,22 @@ public class Largo extends Validador {
         this.max = max;
     }
 
-    public void setMin(int min) {
-        this.min = min;
-    }
-
-    public void setMax(int max) {
-        this.max = max;
-    }
-
     @Override
     public String getMensaje() {
-        return null;
+        return mensaje;
     }
 
     @Override
     public void setMensaje(String mensaje) {
-
+        this.mensaje = mensaje;
     }
 
     @Override
     public boolean esValido(String valor) {
         return valor.length() <= max && valor.length() >= min;
+    }
+
+    public void setFormatMessage(ElementForm elementForm){
+        this.mensaje=String.format(mensaje,elementForm.getNombre(),min,max);
     }
 }

@@ -5,9 +5,9 @@ import Ejercicios.ZOO.animales.Mamifero;
 abstract public class Canino extends Mamifero{
 
     protected String color;
-    protected String tamanoColmillos;
+    protected Float tamanoColmillos;
 
-    public Canino(String habitat, float altura, float largo, String nombreCientifico, String color, String tamanoColmillos) {
+    public Canino(String habitat, float altura, float largo, String nombreCientifico, String color, Float tamanoColmillos) {
         super(habitat, altura, largo, nombreCientifico);
         this.color = color;
         this.tamanoColmillos = tamanoColmillos;
@@ -17,7 +17,7 @@ abstract public class Canino extends Mamifero{
         return color;
     }
 
-    public String getTamanoColmillos() {
+    public Float getTamanoColmillos() {
         return tamanoColmillos;
     }
 

@@ -7,17 +7,17 @@ public class Guepardo extends Felino{
 
     @Override
     public String comer() {
-        return "El "+nombreCientifico+" caza utilizando sus garras de "+tamnoGarras;
+        return "El "+nombreCientifico+" o Guepardo caza utilizando sus garras de "+tamnoGarras+" pulgadas";
     }
 
     @Override
     public String dormir() {
-        return "El "+nombreCientifico+" duerme en "+habitat;
+        return "El "+nombreCientifico+" o Guepardo duerme en "+habitat;
     }
 
     @Override
     public String correr() {
-        return "El "+nombreCientifico+ " corre a una velocidad de "+velocidad+" mididendo este aproximadamente "+largo+" de largo y "+altura+" de alto";
+        return "El "+nombreCientifico+ " o Guepardo corre a una velocidad de "+velocidad+"km/h mididendo este aproximadamente "+largo+"cm de largo y "+altura+"cm de alto";
     }
 
     @Override

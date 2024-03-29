@@ -1,4 +1,4 @@
-package Ejercicios.ZOO.resources.animales.canino;
+package Ejercicios.ZOO.animales.canino;
 
 public class Perro extends Canino{
     private int fuerzaMordida;
@@ -9,21 +9,21 @@ public class Perro extends Canino{
 
     @Override
     public String comer() {
-        return null;
+        return "El "+ nombreCientifico+" "+ color+" caza a sus presas con el osico el cual tiene una fuerza de mordida de "+fuerzaMordida;
     }
 
     @Override
     public String dormir() {
-        return null;
+        return "El "+ nombreCientifico+" "+ color+" duerme en "+habitat;
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El "+ nombreCientifico+" "+ color+"corre mididendo estos aproximadamente "+largo+" de largo y "+altura+" de alto";
     }
 
     @Override
     public String comunicarse() {
-        return null;
+        return "El" + nombreCientifico+" "+color+" ladra";
     }
 }

@@ -1,4 +1,4 @@
-package Ejercicios.ZOO.resources.animales;
+package Ejercicios.ZOO.animales;
 
 abstract public class Mamifero {
     protected  String habitat;

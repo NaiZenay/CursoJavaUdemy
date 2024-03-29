@@ -1,4 +1,4 @@
-package Ejercicios.ZOO.resources.animales.felinos;
+package Ejercicios.ZOO.animales.felinos;
 
 public class Tigre extends Felino{
     private String especieTigre;
@@ -9,21 +9,21 @@ public class Tigre extends Felino{
 
     @Override
     public String comer() {
-        return null;
+        return "El "+nombreCientifico+" "+especieTigre+" caza su comida utilizando sus garras de "+tamnoGarras;
     }
 
     @Override
     public String dormir() {
-        return null;
+        return "El "+nombreCientifico+" "+especieTigre+" duerme en "+habitat;
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El "+nombreCientifico+" "+especieTigre+ "corre a una velocidad de "+velocidad +"mididendo este aproximadamente "+largo+" de largo y "+altura+" de alto";
     }
 
     @Override
     public String comunicarse() {
-        return null;
+        return "El "+nombreCientifico+" "+especieTigre+ " ruge";
     }
 }

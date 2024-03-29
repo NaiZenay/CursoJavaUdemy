@@ -1,6 +1,6 @@
-package Ejercicios.ZOO.resources.animales.felinos;
+package Ejercicios.ZOO.animales.felinos;
 
-import Ejercicios.ZOO.resources.animales.Mamifero;
+import Ejercicios.ZOO.animales.Mamifero;
 
 abstract public class Felino extends Mamifero {
 

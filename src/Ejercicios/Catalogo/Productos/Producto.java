@@ -2,8 +2,12 @@ package Ejercicios.Catalogo.Productos;
 
 import Ejercicios.Catalogo.IProducto;
 
-public class Producto implements IProducto {
+abstract public class Producto implements IProducto {
     private int precio;
+
+    public Producto(int precio) {
+        this.precio = precio;
+    }
 
     @Override
     public int getPrecio() {
@@ -12,6 +16,7 @@ public class Producto implements IProducto {
 
     @Override
     public double getPrecioVenta() {
-        return 0;
+        return this.precio+(this.precio*0.15);
     }
+
 }

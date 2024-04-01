@@ -19,8 +19,9 @@ public class Curriculum extends Hoja implements Imprimible{
         super(contenido);
     }
 
-    public void addExperiencia(String experiencia){
+    public Curriculum addExperiencia(String experiencia){
         exp.add(experiencia);
+        return this;
     }
 
     @Override

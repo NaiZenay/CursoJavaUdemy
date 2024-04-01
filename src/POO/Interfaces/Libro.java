@@ -16,8 +16,9 @@ public class Libro implements Imprimible {
         this.paginas=new ArrayList<>();
     }
 
-    public void addPagina(Hoja hoja) {
+    public Libro addPagina(Hoja hoja) {
         paginas.add(hoja);
+        return this;
     }
 
     @Override

@@ -3,7 +3,7 @@ package POO.IntefaceRepository.Modelo;
 import java.util.Objects;
 
 public class Cliente {
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
 
@@ -18,11 +18,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

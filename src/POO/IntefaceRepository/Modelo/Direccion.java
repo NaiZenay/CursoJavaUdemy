@@ -1,4 +1,4 @@
-package POO.IntefaceRepository;
+package POO.IntefaceRepository.Modelo;
 
 public enum Direccion {
     ASC,

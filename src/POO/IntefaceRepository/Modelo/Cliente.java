@@ -9,7 +9,7 @@ public class Cliente {
 
     private static int ultimoId=0;
     public Cliente() {
-        ultimoId++;
+        id=ultimoId++;
     }
 
     public Cliente(String nombre, String apellido) {
@@ -53,5 +53,14 @@ public class Cliente {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                '}';
     }
 }

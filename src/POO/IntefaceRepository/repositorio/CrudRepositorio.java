@@ -1,4 +1,4 @@
-package POO.IntefaceRepository;
+package POO.IntefaceRepository.repositorio;
 
 import POO.IntefaceRepository.Modelo.Cliente;
 

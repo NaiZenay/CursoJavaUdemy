@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EjemploRepositorio {
     public static void main(String[] args) {
-        CrudRepositorio repo= new ClienteListRepositorio();
+        ClienteListRepositorio repo= new ClienteListRepositorio();
         repo.crearCliente(new Cliente("Richie","Ricon"));
         repo.crearCliente(new Cliente("Monica","Ricon"));
         repo.crearCliente(new Cliente("Arturo","Ricon"));
@@ -25,14 +25,14 @@ public class EjemploRepositorio {
         });
         System.out.println();
 
-        List<Cliente> clientes1= ((Paginable)repo).listar(4,6);
+        List<Cliente> clientes1= repo.listar(4,6);
 
         clientes1.forEach(c->{
             System.out.println(c.toString());
         });
 
         System.out.println();
-        List<Cliente> ordenados=((Ordenable)repo).listar("id", Direccion.DESC);
+        List<Cliente> ordenados=repo.listar("id", Direccion.DESC);
         ordenados.forEach(c->{
             System.out.println(c.toString());
         });

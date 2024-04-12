@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class ClienteListRepositorio implements CrudRepositorio, Ordenable, Paginable {
+public class ClienteListRepositorio implements OredenablePaginableCrud {
     private List<Cliente> dataSource;
 
 
@@ -55,31 +55,18 @@ public class ClienteListRepositorio implements CrudRepositorio, Ordenable, Pagin
     @Override
     public List<Cliente> listar(String campo, Direccion direccion) {
         List<Cliente> ordenada = new ArrayList<>(dataSource);
-
-        ordenada.sort(new Comparator<Cliente>() {
-            @Override
-            public int compare(Cliente o1, Cliente o2) {
+        ordenada.sort((o1,o2)-> {
                 int resultado = 0;
                 if (direccion == Direccion.ASC) {
-                    resultado=this.ordenar(o1,o2);
+                    resultado=ordenar(campo,o1,o2);
                 } else if (direccion == Direccion.DESC) {
-                    resultado=this.ordenar(o2,o1);
+                    resultado=ordenar(campo,o2,o1);
                 }
                 return resultado;
-            }
-
-            private int ordenar(Cliente o1, Cliente o2) {
-                int resultado=0;
-                switch (campo) {
-                    case "id" -> resultado = o1.getId().compareTo(o2.getId());
-                    case "nombre" -> resultado = o1.getNombre().compareTo(o2.getNombre());
-                    case "apellido" -> resultado = o1.getApellido().compareTo(o2.getApellido());
-                }
-                return resultado;
-            }
-        });
+            });
         return ordenada;
     }
+
 
     //paginacion
     @Override

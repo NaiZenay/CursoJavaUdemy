@@ -1,0 +1,19 @@
+
+- Separa codigo que gestiona los errores del codigo principal del programa
+- Permite manejar el error dy continuar con la ejecucion del programa
+- Agrupar y diferenciar entre diferentes tipos de errores
+- Propagar errores hacia arriba en el StackTrace
+
+-Sintaxis
+    try{
+        codigo donde prodia surgir un error
+    }catch(La excepcion){
+        manejo de excepcion
+    }finally{
+        bloque opcional q siempre se ejeccuta
+    }
+
+-Intancia
+    Exception e= new Exception(Mensaje personalizado);
+
+

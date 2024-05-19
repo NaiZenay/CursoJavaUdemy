@@ -1,8 +1,6 @@
 package POO.IntefaceRepository.generics;
 
 import Ejercicios.ProyetoOrdenCompra.Cliente;
-import POO.IntefaceRepository.Modelo.Clientepremium;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

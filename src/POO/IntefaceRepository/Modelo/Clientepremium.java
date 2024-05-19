@@ -1,7 +1,8 @@
 package POO.IntefaceRepository.Modelo;
-
-public class Clientepremium extends Cliente{
-    public Clientepremium(String nombre, String apellido) {
+public class ClientePremium extends Cliente {
+    public ClientePremium(String nombre, String apellido) {
         super(nombre, apellido);
     }
+
+    private int numCliente=0;
 }

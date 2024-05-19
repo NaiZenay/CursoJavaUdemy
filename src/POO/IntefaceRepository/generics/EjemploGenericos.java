@@ -1,6 +1,8 @@
 package POO.IntefaceRepository.generics;
 
 import Ejercicios.ProyetoOrdenCompra.Cliente;
+import POO.IntefaceRepository.Modelo.ClientePRO;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,8 +19,8 @@ public class EjemploGenericos {
         Cliente[] clienteArray = {new Cliente("Ian", "Yañez"), new Cliente("Ian", "Yañez")};
         List<Cliente> clientesfromArray = fromArrayList(clienteArray);
 
-        Clientepremium[] clientepremiums = {new Clientepremium("Alez", "Flores"), new Clientepremium("Alez", "Flores")};
-        List<Clientepremium> clientesP = fromArrayList(clientepremiums);
+        ClientePRO[] clientepremiums = {new ClientePRO("Alez", "Flores"), new ClientePRO("Alez", "Flores")};
+        List<ClientePRO> clientesP = fromArrayList(clientepremiums);
 
         clientesfromArray.forEach(System.out::println);
         clientesP.forEach(System.out::println);

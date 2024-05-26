@@ -4,7 +4,7 @@ import java.nio.channels.SelectionKey;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BolsaSupermercado<T>{
+public class BolsaSupermercado<T extends Producto>{
     private List<T> data;
     private int max =5;
 

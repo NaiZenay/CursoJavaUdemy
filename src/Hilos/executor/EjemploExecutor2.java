@@ -4,7 +4,12 @@ import java.util.concurrent.*;
 
 public class EjemploExecutor2 {
     public static void main(String[] args) throws InterruptedException, ExecutionException, TimeoutException {
-        ExecutorService ex = Executors.newFixedThreadPool(3);
+        ThreadPoolExecutor ex= (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
+        System.out.println("Tamaño de pool:"+ ex.getPoolSize());
+        System.out.println("Cantidad de tareas en cola: "+ex.getQueue().size());
+
+
+
         Callable<String> tarea = (() -> {
             System.out.println("Inicio");
             try {
@@ -28,7 +33,8 @@ public class EjemploExecutor2 {
         Future<String> futureResult2 = ex.submit(tarea);
         Future<Integer> futureResult3 = ex.submit(tarea2);
 
-
+        System.out.println("Tamaño de pool:"+ ex.getPoolSize());
+        System.out.println("Cantidad de tareas en cola: "+ex.getQueue().size());
         ex.shutdown();
         System.out.println("Volviendo al main");
 

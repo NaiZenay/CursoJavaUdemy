@@ -1,6 +1,9 @@
 package Ejercicios;
 
 import javax.swing.*;
+import java.util.IntSummaryStatistics;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class NombreMasLargo {
     /*
@@ -21,6 +24,12 @@ Ejemplo del resultado: "Guillermo Doe tiene el nombre más largo."
 
         resultado+=max;
 
-        JOptionPane.showMessageDialog(null, resultado);
+
+        //Solucion con Streams
+        IntStream nombres=Stream.of(inputnombre1,inputnombre2,inputnombre3).map(nom->nom.split(" ")[0]).mapToInt(String::length);
+        IntSummaryStatistics nombresInt=nombres.summaryStatistics();
+        System.out.println();
+        JOptionPane.showMessageDialog(null, resultado+" con "+nombresInt.getMax()+" carcteres");
+
     }
 }

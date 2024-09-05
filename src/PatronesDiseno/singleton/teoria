@@ -1,0 +1,16 @@
+Los patrones de diseño son soluciones probadas y reutilizables para problemas comunes en el desarrollo de software.
+En Java (y en otros lenguajes orientados a objetos), hay varios patrones de diseño importantes que ayudan a estructurar
+el código de manera eficiente. Estos patrones generalmente se dividen en tres categorías:
+Creacionales, Estructurales y Comportamentales. A continuación, te doy una descripción básica de algunos de los patrones
+de diseño más importantes.
+
+1. Patrones Creacionales
+Estos patrones se centran en la forma de crear objetos.
+
+    1.1. Singleton
+
+        Propósito: Garantiza que una clase tenga una única instancia en todo el sistema y proporciona un punto de acceso
+        global a ella.
+
+        Uso: Se utiliza cuando se necesita una sola instancia, como en el caso de un administrador de configuración
+        o una conexión a una base de datos.

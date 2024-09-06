@@ -32,3 +32,10 @@ Estos patrones tratan sobre cómo ensamblar objetos y clases en estructuras más
     2.2. Composite
     Propósito: Permite tratar objetos individuales y colecciones de objetos de manera uniforme. Se usa una estructura en árbol.
     Uso: Cuando necesitas representar jerarquías de objetos como menús, estructuras organizacionales o gráficos.
+
+3. Patrones Comportamentales
+Estos patrones se centran en cómo los objetos se comunican entre sí.
+
+    3.1. Observer
+    Propósito: Permite que un objeto notifique automáticamente a múltiples objetos sobre cualquier cambio en su estado.
+    Uso: Se usa comúnmente en eventos o sistemas de notificación como GUIs o sistemas de publicación/suscripción.

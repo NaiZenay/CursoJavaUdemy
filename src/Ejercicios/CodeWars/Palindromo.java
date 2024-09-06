@@ -3,6 +3,7 @@ package Ejercicios.CodeWars;
 public class Palindromo {
     public static void main(String[] args) {
         System.out.println(isPalindrome("rotor"));
+        System.out.println(isPalindromeV2(1221));
     }
     static public <T> boolean isPalindrome(T t) {
         String strV = String.valueOf(t);
@@ -13,6 +14,11 @@ public class Palindromo {
             reverse += arrV[i];
         }
         return strV.equals(reverse);
+    }
+
+    static public <T> boolean isPalindromeV2(T t) {
+        StringBuilder sb=new StringBuilder(String.valueOf(t));
+        return sb.reverse().toString().equalsIgnoreCase(String.valueOf(t));
     }
 }
 

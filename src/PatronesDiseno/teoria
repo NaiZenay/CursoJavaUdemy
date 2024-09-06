@@ -14,3 +14,13 @@ Estos patrones se centran en la forma de crear objetos.
 
         Uso: Se utiliza cuando se necesita una sola instancia, como en el caso de un administrador de configuración
         o una conexión a una base de datos.
+
+    1.2. Factory Method
+        Propósito: Proporciona una interfaz para crear objetos en una superclase, pero permite a las subclases alterar
+        el tipo de objetos que se crean.
+
+        Uso: Cuando necesitas delegar la responsabilidad de creación a las subclases, como en bibliotecas donde no se
+        sabe qué tipo exacto de objeto se necesita.
+        
+2. Patrones Estructurales
+Estos patrones tratan sobre cómo ensamblar objetos y clases en estructuras más grandes.

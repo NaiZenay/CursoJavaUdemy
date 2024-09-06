@@ -24,3 +24,11 @@ Estos patrones se centran en la forma de crear objetos.
         
 2. Patrones Estructurales
 Estos patrones tratan sobre cómo ensamblar objetos y clases en estructuras más grandes.
+
+    2.1. Decorator
+    Propósito: Permite agregar responsabilidades a objetos de manera dinámica. Alternativa flexible a la herencia para extender funcionalidad.
+    Uso: Cuando necesitas añadir funcionalidad a objetos individuales, sin afectar a otros objetos de la misma clase.
+
+    2.2. Composite
+    Propósito: Permite tratar objetos individuales y colecciones de objetos de manera uniforme. Se usa una estructura en árbol.
+    Uso: Cuando necesitas representar jerarquías de objetos como menús, estructuras organizacionales o gráficos.

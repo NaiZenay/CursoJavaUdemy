@@ -1,0 +1,30 @@
+package PatronesDiseno.Composite;
+
+import java.util.Objects;
+
+public abstract class Componente {
+    protected String nombre;
+
+    public Componente(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public abstract String mostrar(int nivel);
+
+    abstract public boolean buscar(String nombre);
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Componente that = (Componente) object;
+        return Objects.equals(nombre, that.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
+    }}
